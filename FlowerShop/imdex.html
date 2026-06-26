@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>RoseWorld Premium</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>🌹 RoseWorld Premium</h1>
+  <p>Лучшие букеты с доставкой за 2 часа</p>
+</header>
+
+<nav>
+  <input type="text" id="search" placeholder="🔎 Поиск цветов..." oninput="searchFlowers()">
+  <button onclick="openCart()">🛒 Корзина (<span id="cart-count">0</span>)</button>
+</nav>
+
+<section class="hero">
+  <h2>Скажи эмоции цветами 💐</h2>
+  <button onclick="scrollToCatalog()">Смотреть каталог</button>
+</section>
+
+<section id="catalog">
+  <h2>💐 Каталог</h2>
+
+  <div class="grid" id="flower-list">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1526045478516-99145907023c">
+      <h3>Красные розы</h3>
+      <p>15 шт премиум</p>
+      <b>25€</b>
+      <button onclick="addToCart('Красные розы', 25)">В корзину</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
+      <h3>Весенний микс</h3>
+      <p>Тюльпаны + ромашки</p>
+      <b>18€</b>
+      <button onclick="addToCart('Весенний микс', 18)">В корзину</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946">
+      <h3>Luxury букет</h3>
+      <p>Орхидеи + розы</p>
+      <b>40€</b>
+      <button onclick="addToCart('Luxury букет', 40)">В корзину</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1469259943454-aa100abba749">
+      <h3>Белая нежность</h3>
+      <p>Белые розы</p>
+      <b>22€</b>
+      <button onclick="addToCart('Белая нежность', 22)">В корзину</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92">
+      <h3>Романтика</h3>
+      <p>Розовые розы</p>
+      <b>28€</b>
+      <button onclick="addToCart('Романтика', 28)">В корзину</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- 🛒 CART -->
+<div id="cart" class="cart">
+  <h2>🛒 Корзина</h2>
+  <div id="cart-items"></div>
+  <h3>Итого: <span id="total">0</span> €</h3>
+
+  <h3>📦 Оформление заказа</h3>
+  <input id="name" placeholder="Имя">
+  <input id="phone" placeholder="Телефон">
+  <input id="address" placeholder="Адрес">
+
+  <button onclick="checkout()">Оформить</button>
+  <button onclick="closeCart()">Закрыть</button>
+</div>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+  <div class="popup-box">
+    <h2>✅ Заказ оформлен!</h2>
+    <p>Мы скоро свяжемся с вами 💐</p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
