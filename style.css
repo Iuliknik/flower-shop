@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #fff0f5;
+}
+
+header {
+  background: linear-gradient(90deg, #ff2e63, #ff7aa2);
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  background: white;
+  flex-wrap: wrap;
+}
+
+nav input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.hero {
+  text-align: center;
+  padding: 90px;
+  background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') center/cover;
+  color: white;
+}
+
+.hero button {
+  padding: 12px 20px;
+  border: none;
+  background: #ff2e63;
+  color: white;
+  border-radius: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card button {
+  width: 100%;
+  background: #ff2e63;
+  color: white;
+  border: none;
+  padding: 10px;
+}
+
+/* CART */
+.cart {
+  position: fixed;
+  right: -400px;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  background: white;
+  transition: 0.3s;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.cart.active {
+  right: 0;
+}
+
+.cart input {
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+}
+
+/* POPUP */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.popup-box {
+  background: white;
+  padding: 20px;
+  width: 250px;
+  margin: 150px auto;
+  text-align: center;
+  border-radius: 10px;
+}
